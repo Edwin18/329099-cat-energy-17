@@ -11,7 +11,15 @@
   text-transform: @transform;
 }
 
-.button(@bg-color: #68b738) {
+.list-style() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button(@bg-color: @green--light) {
+  font-family: @secondary-font;
+  .font-size(16px, 20px, 400, @white, uppercase);
   text-decoration: none;
 
   background-color: @bg-color;
