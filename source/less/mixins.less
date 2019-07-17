@@ -2,7 +2,7 @@
   @size: 16px,
   @line: 16px,
   @weight: 400,
-  @color: #000000,
+  @color: @color-primary,
   @transform: none) {
   font-size: @size;
   line-height: @line;
@@ -17,9 +17,9 @@
   padding: 0;
 }
 
-.button(@bg-color: @green--light) {
-  font-family: @secondary-font;
-  .font-size(16px, 20px, 400, @white, uppercase);
+.button(@bg-color: @bg-color-btn-primary) {
+  font-family: @font-secondary;
+  .font-size(16px, 20px, 400, @color-secondary, uppercase);
   text-decoration: none;
 
   background-color: @bg-color;
