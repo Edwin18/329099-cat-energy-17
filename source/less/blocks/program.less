@@ -1,4 +1,9 @@
 .program {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .container-mobile();
+
   font-family: @font-secondary;
 
   // background-color: #5cd315;
@@ -15,5 +20,34 @@
 
   .program__link {
     .button();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .program {
+    .container-tablet();
+
+    background-image: none;
+
+    .program__title {
+      order: -1;
+      .font-size(60px, 60px, 400, @text-color-primary);
+    }
+
+    .program__description {
+      order: -1;
+      .font-size(20px, 20px, 400, @text-color-primary);
+    }
+
+    .program__link {
+      order: -1;
+      .font-size(20px, 20px, 400, @text-color-secondary, uppercase);
+    }
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .program {
+    .container-dekstop();
   }
 }

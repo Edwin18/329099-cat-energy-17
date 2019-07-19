@@ -1,4 +1,11 @@
 .product {
+  display: flex;
+  flex-direction: column;
+
+  .product__wrapper {
+    display: flex;
+  }
+
   .product__title {
     font-family: @font-secondary;
     .font-size(16px, 20px, 400, @text-color-primary, uppercase);
@@ -14,5 +21,33 @@
 
   .product__buy {
     .button();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .product {
+    width: 324px;
+
+    .product__wrapper {
+      flex-direction: column;
+    }
+
+    .product__title {
+      .font-size(20px, 20px, 400, @text-color-primary, uppercase);
+    }
+
+    .product__field {
+      .font-size(16px, 16px, 400, @text-color-text);
+    }
+
+    .product__value {
+      .font-size(16px, 16px, 400, @text-color-text);
+    }
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .product {
+    width: 245px;
   }
 }

@@ -1,6 +1,24 @@
 .page-catalog {
+  .container-mobile();
+
   .page-catalog__title {
     font-family: @font-secondary;
     .font-size(36px, 60px, 400, @text-color-primary);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-catalog {
+    .container-tablet();
+
+    .page-catalog__title {
+      .font-size(60px, 60px, 400, @text-color-primary);
+    }
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .page-catalog {
+    .container-dekstop();
   }
 }
