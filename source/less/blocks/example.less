@@ -1,6 +1,12 @@
 .example {
   background-color: @bg-color-primary;
 
+  .example__wrapper {
+    display: flex;
+    flex-direction: column;
+    .breakpoint();
+  }
+
   .example__title {
     font-family: @font-secondary;
     .font-size(36px, 60px, 400, @text-color-primary);
@@ -8,6 +14,17 @@
 
   .example__description {
     .font-size(14px, 18px, 400, @text-color-text);
+  }
+
+  .example__statistics-wrapper-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .example__statistics-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 124px;
   }
 
   .example__statistics {
@@ -20,11 +37,15 @@
   }
 
   .example__food-costs {
+    flex-grow: 1;
+
     font-family: @font-secondary;
     .font-size(14px, 20px, 400, @text-color-primary, uppercase);
   }
 
   .example__controls {
+    align-self: center;
+
     font-family: @font-secondary;
     .font-size(16px, 20px, 400, @text-color-primary, uppercase);
   }

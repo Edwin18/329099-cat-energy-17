@@ -1,3 +1,23 @@
 .page-footer {
   background-color: @bg-color-primary;
+
+  .page-footer__top {
+    background-color: @bg-color-secondary;
+  }
+
+  .page-footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .breakpoint();
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    .page-footer__bottom {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 }

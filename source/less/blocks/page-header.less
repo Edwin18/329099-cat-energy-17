@@ -2,8 +2,7 @@
   .page-header__wrapper {
     display: flex;
     flex-direction: column;
-    width: 320px;
-    margin: 0 auto;
+    .breakpoint();
   }
 
   .page-header__logo {
@@ -18,7 +17,6 @@
     .page-header__wrapper {
       flex-direction: row;
       justify-content: space-between;
-      width: 708px;
     }
 
     .page-header__logo {
@@ -31,10 +29,6 @@
 
 @media (min-width: @dekstop-width) {
   .page-header {
-    .page-header__wrapper {
-      width: 1220px;
-    }
-
     .page-header__logo {
       width: 202px;
       height: 59px;

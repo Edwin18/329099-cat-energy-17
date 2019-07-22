@@ -1,7 +1,7 @@
 .advantages {
   display: flex;
   flex-direction: column;
-  .container-mobile();
+  .breakpoint();
 
   .advantages__title {
     font-family: @font-secondary;
@@ -24,8 +24,6 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
-    .container-tablet();
-
     .advantages__title {
       .font-size(60px, 60px, 400, @text-color-primary);
     }
@@ -42,8 +40,8 @@
   }
 }
 
-@media (min-width: @dekstop-width) {
-  .advantages {
-    .container-dekstop();
-  }
-}
+// @media (min-width: @dekstop-width) {
+//   .advantages {
+
+//   }
+// }

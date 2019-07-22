@@ -1,5 +1,5 @@
 .page-catalog {
-  .container-mobile();
+  .breakpoint();
 
   .page-catalog__title {
     font-family: @font-secondary;
@@ -9,16 +9,14 @@
 
 @media (min-width: @tablet-width) {
   .page-catalog {
-    .container-tablet();
-
     .page-catalog__title {
       .font-size(60px, 60px, 400, @text-color-primary);
     }
   }
 }
 
-@media (min-width: @dekstop-width) {
-  .page-catalog {
-    .container-dekstop();
-  }
-}
+// @media (min-width: @dekstop-width) {
+//   .page-catalog {
+
+//   }
+// }

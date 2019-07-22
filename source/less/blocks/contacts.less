@@ -1,5 +1,11 @@
 .contacts {
-  background-color: @bg-color-primary;
+  display: flex;
+  flex-direction: column;
+
+  .contacts__wrapper {
+    display: flex;
+    .breakpoint();
+  }
 
   .contacts__title {
     font-family: @font-secondary;
@@ -8,6 +14,10 @@
 
   .contacts__address {
     .font-size(14px, 20px, 400, @text-color-text);
+  }
+
+  .contacts__image {
+    margin: 0 auto;
   }
 }
 
