@@ -1,6 +1,23 @@
 .example {
   background-color: @bg-color-primary;
 
+  .example__wrapper-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example__wrapper-top {
+    display: flex;
+    flex-direction: column;
+    .breakpoint();
+  }
+
+  .example__wrapper-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .example__title {
     font-family: @font-secondary;
     .font-size(36px, 60px, 400, @text-color-primary);
@@ -8,6 +25,19 @@
 
   .example__description {
     .font-size(14px, 18px, 400, @text-color-text);
+  }
+
+  .example__statistics-wrapper-main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .example__statistics-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 124px;
+    flex-grow: 1;
   }
 
   .example__statistics {
@@ -20,12 +50,72 @@
   }
 
   .example__food-costs {
+    flex-grow: 1;
+    text-align: center;
+
     font-family: @font-secondary;
     .font-size(14px, 20px, 400, @text-color-primary, uppercase);
   }
 
+  .example__image {
+    align-self: center;
+  }
+
   .example__controls {
+    align-self: center;
+
     font-family: @font-secondary;
     .font-size(16px, 20px, 400, @text-color-primary, uppercase);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    .example__title {
+      .font-size(60px, 60px, 400, @text-color-primary);
+    }
+
+    .example__description {
+      .font-size(16px, 18px, 400, @text-color-text);
+    }
+
+    .example__statistics {
+      font-family: @font-secondary;
+      .font-size(30px, 37px, 400, @text-color-primary, uppercase);
+    }
+
+    .example__statistics-item {
+      .font-size(14px, 14px, 400, @text-color-text);
+    }
+
+    .example__food-costs {
+      font-family: @font-secondary;
+      .font-size(20px, 20px, 400, @text-color-primary, uppercase);
+    }
+
+    .example__controls {
+      font-family: @font-secondary;
+      .font-size(20px, 20px, 400, @text-color-primary, uppercase);
+    }
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .example {
+    .example__wrapper-main {
+      flex-direction: row;
+      .breakpoint();
+    }
+
+    .example__wrapper-top {
+      width: 610px;
+      padding: 0;
+    }
+
+    .example__statistics-wrapper {
+      flex-grow: 0;
+      width: 162px;
+      margin-right: 42px;
+    }
   }
 }

@@ -1,0 +1,33 @@
+.categories {
+  .breakpoint();
+
+  .categories__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .categories__program {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .categories {
+    .categories__program {
+      margin-top: 30px;
+    }
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .categories {
+    .categories__wrapper {
+      flex-direction: row;
+      margin-left: -80px;
+    }
+
+    .categories__program {
+      margin-left: 80px;
+    }
+  }
+}

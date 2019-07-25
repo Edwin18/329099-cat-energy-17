@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Bodik Malomuzh](https://up.htmlacademy.ru/adaptive/17/user/329099).
-* Наставник: [Лиза Позднякова](https://up.htmlacademy.ru/adaptive/17/user/5608).
+* Наставник: [Виктория Коваленко](https://up.htmlacademy.ru/adaptive/17/user/42638).
 
 ---
 

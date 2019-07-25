@@ -1,9 +1,35 @@
 .site-list {
+  display: flex;
+  flex-direction: column;
+
   font-family: @font-secondary;
   .list-style();
+
+  .site-list__item {
+    display: flex;
+    justify-content: center;
+  }
 
   .site-list__link {
     .font-size(20px, 20px, 500, @text-color-primary, uppercase);
     text-decoration: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    flex-direction: row;
+
+    .site-list__link {
+      .font-size(18px, 25px, 400, @text-color-primary, uppercase);
+    }
+  }
+}
+
+@media (min-width: @dekstop-width) {
+  .site-list {
+    .site-list__link {
+      .font-size(18px, 25px, 400, @text-color-secondary, uppercase);
+    }
   }
 }
