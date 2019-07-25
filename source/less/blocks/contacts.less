@@ -1,4 +1,6 @@
 .contacts {
+  position: relative;
+
   display: flex;
   flex-direction: column;
 
@@ -29,14 +31,15 @@
   }
 }
 
-// @media (min-width: @dekstop-width) {
-//   .contacts {
-//     .contacts__title {
+@media (min-width: @dekstop-width) {
+  .contacts {
+    .contacts__wrapper {
+      position: absolute;
 
-//     }
+      width: 570px;
+      height: 201px;
 
-//     .contacts__address {
-
-//     }
-//   }
-// }
+      background-color: @bg-color-secondary;
+    }
+  }
+}

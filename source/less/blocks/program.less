@@ -11,7 +11,8 @@
   background-repeat: no-repeat;
 
   .program__title {
-    .font-size(36px, 36px, 400, @text-color-secondary);
+    line-height: 36px;
+    color: @text-color-secondary;
     text-align: center;
   }
 
@@ -63,8 +64,16 @@
   }
 }
 
-// @media (min-width: @dekstop-width) {
-//   .program {
+@media (min-width: @dekstop-width) {
+  .program {
+    position: relative;
 
-//   }
-// }
+    min-height: 400px;
+
+    .program__image {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}

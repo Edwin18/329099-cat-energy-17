@@ -1,0 +1,23 @@
+.social {
+  .social__list {
+    display: flex;
+
+    .list-style();
+  }
+
+  .social__link {
+    &:hover {
+      .social__icon {
+        .st0 {
+          fill: @green--light;
+        }
+      }
+    }
+
+    &:active {
+      .social__icon {
+        opacity: 0.3;
+      }
+    }
+  }
+}

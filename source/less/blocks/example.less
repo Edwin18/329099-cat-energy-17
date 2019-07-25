@@ -1,10 +1,21 @@
 .example {
   background-color: @bg-color-primary;
 
-  .example__wrapper {
+  .example__wrapper-main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .example__wrapper-top {
     display: flex;
     flex-direction: column;
     .breakpoint();
+  }
+
+  .example__wrapper-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .example__title {
@@ -89,6 +100,22 @@
   }
 }
 
-// @media (min-width: @dekstop-width) {
+@media (min-width: @dekstop-width) {
+  .example {
+    .example__wrapper-main {
+      flex-direction: row;
+      .breakpoint();
+    }
 
-// }
+    .example__wrapper-top {
+      width: 610px;
+      padding: 0;
+    }
+
+    .example__statistics-wrapper {
+      flex-grow: 0;
+      width: 162px;
+      margin-right: 42px;
+    }
+  }
+}
