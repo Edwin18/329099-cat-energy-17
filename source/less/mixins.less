@@ -17,6 +17,17 @@
   padding: 0;
 }
 
+.before-after(@top, @left, @width, @height) {
+  content: "";
+
+  position: absolute;
+  top: @top;
+  left: @left;
+
+  box-sizing: border-box;
+  width: @width;
+  height: @height;
+}
 .breakpoint() {
   width: ~"calc(@{mobile-width} - 20px * 2)";
   margin: 0 auto;
