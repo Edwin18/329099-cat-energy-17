@@ -28,8 +28,10 @@
 
 @media (min-width: @dekstop-width) {
   .site-list {
-    .site-list__link {
-      .font-size(18px, 25px, 400, @text-color-secondary, uppercase);
+    &--index {
+      .site-list__link {
+        color: @text-color-secondary;
+      }
     }
   }
 }
