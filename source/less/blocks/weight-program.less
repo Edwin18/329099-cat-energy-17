@@ -31,8 +31,8 @@
       content: "";
 
       position: absolute;
-      top: 24px;
-      left: 22px;
+      top: 23px;
+      left: 30px;
 
       width: 35px;
       height: 49px;
@@ -46,8 +46,8 @@
       content: "";
 
       position: absolute;
-      top: 24px;
-      left: 22px;
+      top: 35px;
+      left: 13px;
 
       width: 67px;
       height: 28px;
@@ -57,7 +57,7 @@
   }
 
   .weight-program__title {
-    margin-top: 0;
+    margin-top: 10px;
     margin-left: 72px;
 
     font-family: @font-secondary;
@@ -65,6 +65,8 @@
   }
 
   .weight-program__description {
+    margin-top: 5px;
+
     .font-size(14px, 18px, 400, @text-color-text);
   }
 
@@ -72,6 +74,9 @@
     position: relative;
 
     width: 100%;
+    margin-top: auto;
+    margin-bottom: 2px;
+    padding-top: 19px;
 
     font-family: @font-secondary;
     .font-size(16px, 16px, 400, @text-color-primary, uppercase);
@@ -83,7 +88,7 @@
       content: "";
 
       position: absolute;
-      top: 0;
+      top: 22px;
       left: 95px;
 
       width: 24px;
@@ -102,7 +107,9 @@
     }
 
     &:active {
-      opacity: 0.3;
+      &::after {
+        opacity: 0.3;
+      }
     }
   }
 }

@@ -7,10 +7,102 @@
     padding: 0;
 
     border: none;
+
+    &--about-cat {
+      margin-top: 9px;
+    }
+
+    &--radio {
+      box-sizing: border-box;
+      width: 320px;
+      margin-left: -20px;
+      margin-top: 7px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+
+      border: 1px solid #ededed;
+    }
+
+    &--about-owner {
+      margin-top: 28px;
+    }
+
+    &--comment {
+      margin-top: 11px;
+    }
+
+    &--checkbox {
+      margin-top: 25px;
+    }
+  }
+
+  .form__legend-title {
+    position: relative;
+
+    width: 100%;
+    margin-left: -1px;
+
+    .font-size(24px, 24px, 400, @text-color-primary);
+    font-family: @font-secondary;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 14px;
+      right: -21px;
+
+      height: 3px;
+
+      background-color: @green--light;
+    }
+
+    &--about-owner {
+      margin-bottom: 17px;
+
+      &::after {
+        width: 99px;
+      }
+    }
+
+    &--comment {
+      margin-bottom: 35px;
+
+      &::after {
+        width: 158px;
+      }
+    }
+
+    &--additional {
+      &::after {
+        width: 136px;
+      }
+    }
+  }
+
+  .form__wrapper-checkbox {
+    margin-top: 40px;
   }
 
   .form__wrapper {
+    position: relative;
     display: flex;
+    align-items: center;
+
+    &--text {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+
+    &--radio {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    &--checkbox {
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
   }
 
   .form__label {
@@ -19,13 +111,18 @@
     font-family: @font-secondary;
     .font-size(16px, 18px, 400, @text-color-primary, uppercase);
 
+    &--text {
+      margin-right: 15px;
+      margin-left: -1px;
+    }
+
     &--radio {
-      margin-left: 46px;
+      margin-left: 66px;
 
       cursor: pointer;
 
       &::before {
-        .before-after(-5px, -46px, 30px, 30px);
+        .before-after(-6px, -47px, 30px, 30px);
 
         border: 1px solid @gray-205;
         border-radius: 50%;
@@ -44,7 +141,7 @@
       cursor: pointer;
 
       &::before {
-        .before-after(0, -46px, 30px, 30px);
+        .before-after(-4px, -46px, 30px, 30px);
 
         border: 1px solid @gray-205;
       }
@@ -62,7 +159,7 @@
       + .form__label {
         &--radio {
           &::after {
-            .before-after(5px, -36px, 12px, 12px);
+            .before-after(3px, -38px, 12px, 12px);
 
             background-color: @green--light;
             border-radius: 50%;
@@ -86,7 +183,7 @@
       + .form__label {
         &--checkbox {
           &::after {
-            .before-after(7px, -39px, 21px, 16px);
+            .before-after(2px, -41px, 21px, 16px);
 
             background-image: url("../img/icon-tick.svg");
             background-repeat: no-repeat;
@@ -107,28 +204,70 @@
 
   .form__text {
     flex-grow: 1;
-    padding: 15px;
+    box-sizing: border-box;
+    height: 45px;
+    padding-top: 11px;
+    padding-right: 10px;
+    padding-bottom: 14px;
+    padding-left: 13px;
 
     font-family: @font-secondary;
     .font-size(16px, 18px, 400, @text-color-text, uppercase);
 
     border: 1px solid @gray-231;
+
+    &--comment {
+      width: 280px;
+      height: 150px;
+    }
+
+    &:hover {
+      border-color: @gray-205;
+    }
+
+    &:focus {
+      border: 2px solid @gray;
+
+      + .form__input path {
+        fill: @green--light;
+      }
+    }
+
+    &:invalid:not(:focus):not(:placeholder-shown) {
+      border: 2px solid @red-lighter;
+
+      + .form__input path {
+        fill: @red-lighter;
+      }
+    }
   }
 
-  .form__legend-title {
-    font-family: @font-secondary;
-    .font-size(24px, 24px, 400, @text-color-primary);
+  .form__input {
+    position: absolute;
+    top: 17px;
+    right: 16px;
+
+    &--phone {
+      top: 12px;
+      right: 13px;
+    }
   }
 
   .form__wrapper-bottom {
     display: flex;
     flex-direction: column;
+    margin-top: 18px;
+    margin-bottom: 18px;
   }
 
   .form__info {
+    margin-top: 21px;
+    align-self: center;
     .font-size(14px, 16px, 400, @text-color-text);
   }
 }
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 @media (min-width: @tablet-width) {
   .form {
@@ -149,9 +288,6 @@
 
       &--checkbox {
         &::before {
-          // top: 0;
-          // left: 0;
-
           width: 40px;
           height: 40px;
         }
@@ -204,6 +340,8 @@
     }
   }
 }
+
+// // // // // // // // // // // // // // // // // // // // // // // // // // //
 
 @media (min-width: @dekstop-width) {
   .form {

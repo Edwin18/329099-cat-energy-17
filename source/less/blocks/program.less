@@ -9,19 +9,39 @@
   // background-color: #5cd315;
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
+  background-size: 320px 305px;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg");
+  }
 
   .program__title {
+    margin-top: 27px;
+    margin-bottom: 15px;
+
     line-height: 36px;
     color: @text-color-secondary;
     text-align: center;
   }
 
   .program__description {
+    margin-top: 10px;
+    margin-bottom: 28px;
+
     .font-size(14px, 14px, 400, @text-color-secondary, uppercase);
+  }
+
+  .program__image {
+    display: block;
   }
 
   .program__link {
     width: 100%;
+    margin-top: 3px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    .font-size(14px, 18px, 400, @text-color-secondary, uppercase);
   }
 }
 

@@ -4,17 +4,31 @@
   display: flex;
   flex-direction: column;
 
+  &--another-style {
+    background-color: @gray-242;
+  }
+
   .contacts__wrapper {
     display: flex;
+    justify-content: space-between;
     .breakpoint();
+    padding-top: 12px;
+    padding-bottom: 10px;
+    margin: 0;
+    align-self: center;
   }
 
   .contacts__title {
+    width: 50%;
+
     font-family: @font-secondary;
     .font-size(16px, 20px, 400, @text-color-primary, uppercase);
   }
 
   .contacts__address {
+    width: 50%;
+    margin-top: 16px;
+
     .font-size(14px, 20px, 400, @text-color-text);
   }
 }

@@ -4,6 +4,7 @@
   .breakpoint();
 
   .advantages__title {
+    margin-top: 17px;
     font-family: @font-secondary;
     .font-size(36px, 60px, 400, @text-color-primary);
   }
@@ -11,14 +12,15 @@
   .advantages__list {
     display: flex;
     flex-direction: column;
-
     .list-style();
+    margin-top: -25px;
+    margin-bottom: 46px;
   }
 
   .advantages__item {
     position: relative;
 
-    margin-top: 30px;
+    margin-top: 26px;
     margin-left: 80px;
 
     .font-size(14px, 18px, 400, @text-color-text);
@@ -27,7 +29,7 @@
       content: "";
 
       position: absolute;
-      top: 0;
+      top: -2px;
       left: -80px;
 
       width: 60px;
@@ -36,29 +38,46 @@
       background-color: @green--light;
       background-position: center center;
       background-repeat: no-repeat;
+      background-size: 50px 50px;
     }
 
     &--nutritious {
       &::before {
         background-image: url("../img/advantage-leaf@1x.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/advantage-leaf@2x.png");
+        }
       }
     }
 
     &--powder {
       &::before {
         background-image: url("../img/advantage-powder@1x.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/advantage-powder@2x.png");
+        }
       }
     }
 
     &--food {
       &::before {
         background-image: url("../img/advantage-dining@1x.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/advantage-dining@2x.png");
+        }
       }
     }
 
     &--time {
       &::before {
         background-image: url("../img/advantage-clock@1x.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/advantage-clock@2x.png");
+        }
       }
     }
   }

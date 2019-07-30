@@ -1,8 +1,11 @@
 .copyright {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 280px;
   text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   &:hover {
     .copyright__icon {
@@ -17,6 +20,7 @@
   }
 
   .copyright__text {
+    margin-left: -1px;
     .font-size(16px, 16px, 400, @text-color-text);
   }
 }

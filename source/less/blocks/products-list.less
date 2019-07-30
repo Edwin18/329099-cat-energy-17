@@ -1,5 +1,13 @@
 .products-list {
   .list-style();
+
+  .products-list__item {
+    border-top: 1px solid @gray-205;
+
+    &:last-child {
+      border-bottom: 1px solid @gray-205;
+    }
+  }
 }
 
 @media (min-width: @dekstop-width) {
