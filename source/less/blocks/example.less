@@ -97,12 +97,13 @@
     top: 0;
     left: 0;
 
-    z-index: 1;
-
     width: 0;
     height: 100%;
+
     background-color: @bg-color-primary;
-    background-image: url("../img/after-mobile@1x.png");
+
+    object-fit: none;
+    object-position: left;
   }
 
   .example__controls {
@@ -116,12 +117,20 @@
 
 @media (min-width: @tablet-width) {
   .example {
+    margin-top: 9px;
+
     .example__title {
+      margin-top: 44px;
+      margin-bottom: 30px;
+
       .font-size(60px, 60px, 400, @text-color-primary);
     }
 
     .example__description {
-      .font-size(16px, 18px, 400, @text-color-text);
+      width: 700px;
+      margin-top: 34px;
+
+      .font-size(16px, 24px, 400, @text-color-text);
     }
 
     .example__statistics {

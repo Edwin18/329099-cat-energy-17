@@ -47,15 +47,27 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
+    .breakpoint();
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 24px;
+
     .page-header__wrapper {
       flex-direction: row;
       justify-content: space-between;
+      padding: 0;
+
+      border: none;
     }
 
     .page-header__logo {
       width: 173px;
       height: 58px;
       margin: 0;
+    }
+
+    .page-header__toggle {
+      display: none;
     }
   }
 }

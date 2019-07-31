@@ -24,8 +24,16 @@
 @media (min-width: @tablet-width) {
   .site-list {
     flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+
+    .site-list__item {
+      border: none;
+    }
 
     .site-list__link {
+      padding-top: 18px;
+
       .font-size(18px, 25px, 400, @text-color-primary, uppercase);
     }
   }

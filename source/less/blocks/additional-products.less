@@ -25,6 +25,11 @@
     background-color: @green--light;
     background-image: url("../img/gift-photo-mobile@1x.jpg");
     background-repeat: no-repeat;
+    background-size: 280px 289px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/gift-photo-mobile@2x.jpg");
+    }
 
     &::before {
       content: "";

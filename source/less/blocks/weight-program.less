@@ -129,8 +129,8 @@
 
     &--slim {
       &::after {
-        top: 60px;
-        left: 450px;
+        top: 80px;
+        left: 476px;
 
         width: 140px;
         height: 194px;
@@ -139,8 +139,8 @@
 
     &--pro {
       &::after {
-        top: 135px;
-        left: 400px;
+        top: 134px;
+        left: 412px;
 
         width: 268px;
         height: 112px;
@@ -148,7 +148,9 @@
     }
 
     .weight-program__title {
-      margin-left: 0;
+      margin-top: 56px;
+      margin-bottom: 19px;
+      margin-left: 1px;
 
       .font-size(36px, 37px, 400, @text-color-primary, uppercase);
     }
@@ -160,13 +162,24 @@
     }
 
     .weight-program__link {
+      margin-bottom: 42px;
+
       .font-size(20px, 20px, 400, @text-color-primary, uppercase);
 
       border: none;
 
-      &::after {
-        top: 0;
-        left: 115px;
+      &--slim {
+        &::after {
+          top: 23px;
+          left: 132px;
+        }
+      }
+
+      &--pro {
+        &::after {
+          top: 23px;
+          left: 126px;
+        }
       }
     }
   }

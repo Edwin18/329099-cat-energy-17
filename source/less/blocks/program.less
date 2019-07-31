@@ -16,6 +16,7 @@
   }
 
   .program__title {
+    width: 280px;
     margin-top: 27px;
     margin-bottom: 15px;
 
@@ -54,7 +55,8 @@
     .program__title {
       order: -1;
 
-      margin-left: 90px;
+      margin-top: 50px;
+      margin-left: 87px;
 
       .font-size(60px, 60px, 400, @text-color-primary);
       text-align: unset;
@@ -63,9 +65,16 @@
     .program__description {
       order: -1;
 
-      margin-left: 90px;
+      margin-top: 26px;
+      margin-left: 88px;
 
-      .font-size(20px, 20px, 400, @text-color-primary);
+      .font-size(20px, 20px, 400, @text-color-primary, uppercase);
+    }
+
+    .program__image {
+      width: 709px;
+      height: 609px;
+      margin-top: -80px;
     }
 
     .program__link {
@@ -73,13 +82,14 @@
       order: -1;
 
       width: auto;
+      margin-top: 20px;
       margin-left: 90px;
+      padding-top: 16px;
+      padding-right: 29px;
+      padding-bottom: 16px;
+      padding-left: 24px;
 
       .font-size(20px, 20px, 400, @text-color-secondary, uppercase);
-    }
-
-    .program__image {
-      margin-top: -40px;
     }
   }
 }

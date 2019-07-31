@@ -85,6 +85,8 @@
 
 @media (min-width: @tablet-width) {
   .advantages {
+    margin-top: 27px;
+
     .advantages__title {
       .font-size(60px, 60px, 400, @text-color-primary);
     }
@@ -92,17 +94,20 @@
     .advantages__list {
       flex-direction: row;
       flex-wrap: wrap;
+      margin-top: -65px;
+      margin-left: -60px;
 
       counter-reset: num;
     }
 
     .advantages__item {
       box-sizing: border-box;
-      width: 354px;
+      width: 324px;
       min-height: 230px;
-      margin: 0;
-      padding-top: 110px;
-      padding-right: 105px;
+      margin-top: 87px;
+      margin-left: 60px;
+      padding-top: 111px;
+      padding-right: 70px;
 
       .font-size(16px, 24px, 400, @text-color-text);
 
@@ -120,12 +125,18 @@
 
         position: absolute;
         top: -40px;
-        left: 120px;
+        left: 112px;
 
         z-index: -1;
 
         font-family: @font-secondary;
         .font-size(281px, 281px, 400, @gray-242);
+      }
+
+      &--nutritious {
+        &::after {
+          left: 118px;
+        }
       }
     }
   }
