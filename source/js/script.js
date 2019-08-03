@@ -24,6 +24,23 @@ if (document.querySelector("#example-cat")) {
   range();
 }
 
+var btnBefore = document.querySelector(".example__button--before");
+var btnAfter = document.querySelector(".example__button--after");
+var imageAfter = document.querySelector(".example__image-after");
+var imageBar = document.querySelector(".example__controls-bar");
+
+btnBefore.addEventListener("click", function(evn) {
+  evn.preventDefault();
+  imageAfter.style.width = "0";
+  imageBar.classList.remove("example__controls-bar--after");
+});
+
+btnAfter.addEventListener("click", function(evn) {
+  evn.preventDefault();
+  imageAfter.style.width = "100%";
+  imageBar.classList.add("example__controls-bar--after");
+});
+
 // if (document.documentMode || /Edge/.test(navigator.userAgent)) {
 //   jQuery('.art-img img').each(function(){
 //       var t = jQuery(this),

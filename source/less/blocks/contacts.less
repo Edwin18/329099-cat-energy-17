@@ -35,12 +35,35 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
+    .contacts__wrapper {
+      padding-top: 46px;
+      padding-bottom: 40px;
+    }
+
     .contacts__title {
+      width: 200px;
+      margin-left: 41px;
+
       .font-size(20px, 25px, 400, @text-color-primary, uppercase);
     }
 
     .contacts__address {
+      width: 195px;
+      margin-top: 18px;
+      margin-right: 42px;
+
       .font-size(16px, 20px, 400, @text-color-text);
+      text-align: end;
+
+      &--city {
+        display: flex;
+        margin-top: 20px;
+        margin-left: 69px;
+      }
+    }
+
+    .contacts__map {
+      height: 396px;
     }
   }
 }
@@ -49,11 +72,32 @@
   .contacts {
     .contacts__wrapper {
       position: absolute;
+      top: 95px;
+      left: 342px;
 
+      box-sizing: border-box;
       width: 570px;
       height: 201px;
 
       background-color: @bg-color-secondary;
+    }
+
+    .contacts__title {
+      margin-left: 36px;
+    }
+
+    .contacts__address {
+      margin-right: 9px;
+
+      text-align: start;
+
+      &--city {
+        margin-left: 0;
+      }
+    }
+
+    .contacts__map {
+      height: 399px;
     }
   }
 }

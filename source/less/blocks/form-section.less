@@ -14,12 +14,45 @@
 
 @media (min-width: @tablet-width) {
   .form-section {
+    .form-section__title {
+      margin-top: 50px;
+      margin-bottom: 25px;
+    }
+
     .form-section__description {
+      width: 350px;
+      margin-top: 56px;
+      margin-bottom: 41px;
+      margin-left: 41px;
+
       .font-size(20px, 30px, 400, @text-color-primary, uppercase);
+    }
+
+    .form-section__form {
+      margin-right: 37px;
+      margin-bottom: 72px;
+      margin-left: 41px;
     }
   }
 }
 
-// @media (min-width: @dekstop-width) {
+@media (min-width: @dekstop-width) {
+  .form-section {
+    margin-bottom: 22px;
+    padding-bottom: 20px;
 
-// }
+    .form-section__title {
+      margin-top: 66px;
+    }
+
+    .form-section__description {
+      margin-top: 55px;
+      margin-bottom: 66px;
+      margin-left: 1px;
+    }
+
+    .form-section__form {
+      margin: 0;
+    }
+  }
+}

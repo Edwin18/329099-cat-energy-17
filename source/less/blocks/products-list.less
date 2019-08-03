@@ -10,8 +10,32 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .products-list {
+    .products-list__item {
+      border-top: 1px solid @gray-230;
+      border-right: 1px solid @gray-230;
+      border-left: 1px solid @gray-230;
+
+      &:last-child {
+        border-bottom: 1px solid @gray-230;
+      }
+    }
+  }
+}
+
 @media (min-width: @dekstop-width) {
   .products-list {
     width: 895px;
+
+    .products-list__item {
+      border-color: @gray-205;
+      border-right: none;
+      border-left: none;
+
+      &:last-child {
+        border-color: @gray-205;
+      }
+    }
   }
 }

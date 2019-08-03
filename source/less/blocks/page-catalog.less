@@ -10,12 +10,30 @@
   }
 }
 
-// @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .page-catalog {
+    .breakpoint();
 
-// }
+    .page-catalog__title {
+      align-self: unset;
+      margin-top: 50px;
+      margin-left: 0;
+    }
 
-// @media (min-width: @dekstop-width) {
-//   .page-catalog {
+    .page-catalog__list {
+      margin-top: -2px;
+    }
+  }
+}
 
-//   }
-// }
+@media (min-width: @dekstop-width) {
+  .page-catalog {
+    .page-catalog__title {
+      margin-top: 66px;
+    }
+
+    .page-catalog__list {
+      margin-top: -4px;
+    }
+  }
+}

@@ -43,6 +43,10 @@
     padding-bottom: 11px;
 
     .font-size(14px, 18px, 400, @text-color-secondary, uppercase);
+
+    &:active {
+      color: @white-opacity-30;
+    }
   }
 }
 
@@ -55,6 +59,7 @@
     .program__title {
       order: -1;
 
+      width: 500px;
       margin-top: 50px;
       margin-left: 87px;
 
@@ -83,11 +88,11 @@
 
       width: auto;
       margin-top: 20px;
-      margin-left: 90px;
+      margin-left: 89px;
       padding-top: 16px;
       padding-right: 29px;
       padding-bottom: 16px;
-      padding-left: 24px;
+      padding-left: 25px;
 
       .font-size(20px, 20px, 400, @text-color-secondary, uppercase);
     }
@@ -98,12 +103,30 @@
   .program {
     position: relative;
 
-    min-height: 400px;
+    padding-bottom: 188px;
+
+    .program__title {
+      margin-top: 100px;
+      margin-left: 81px;
+    }
+
+    .program__description {
+      margin-top: 27px;
+      margin-left: 81px;
+    }
 
     .program__image {
       position: absolute;
-      top: 0;
-      right: 0;
+      top: 100px;
+      right: 258px;
+
+      width: 552px;
+      height: 499px;
+    }
+
+    .program__link {
+      margin-top: 24px;
+      margin-left: 80px;
     }
   }
 }

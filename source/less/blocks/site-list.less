@@ -18,6 +18,31 @@
 
     .font-size(20px, 20px, 500, @text-color-primary, uppercase);
     text-decoration: none;
+
+    &:hover {
+      color: @black-opacity-60;
+    }
+
+    &:active {
+      color: @black-opacity-30;
+    }
+
+    &--active {
+      position: relative;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: 50px;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: @green--light;
+      }
+    }
   }
 }
 
@@ -41,9 +66,35 @@
 
 @media (min-width: @dekstop-width) {
   .site-list {
+    .site-list__link {
+      padding-top: 20px;
+
+      .font-size(20px, 25px, 400, @text-color-primary, uppercase);
+
+      &--active {
+        &::after {
+          top: 52px;
+        }
+      }
+    }
+
     &--index {
       .site-list__link {
         color: @text-color-secondary;
+
+        &:hover {
+          color: @white-opacity-60;
+        }
+
+        &:active {
+          color: @white-opacity-30;
+        }
+
+        &--active {
+          &::after {
+            background-color: @white;
+          }
+        }
       }
     }
   }
