@@ -1,12 +1,22 @@
+.main-nav {
+  display: none;
+
+  &--open {
+    display: block;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: 450px;
+    display: flex;
+    justify-content: flex-end;
+    width: 439px;
     margin: 0;
   }
 }
 
 @media (min-width: @dekstop-width) {
   .main-nav {
-    width: 500px;
+    width: 479px;
   }
 }

@@ -16,28 +16,42 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 35px;
   }
 
   .example__title {
+    margin-top: 17px;
+    margin-bottom: 10px;
+
     font-family: @font-secondary;
     .font-size(36px, 60px, 400, @text-color-primary);
   }
 
   .example__description {
+    width: 270px;
+
     .font-size(14px, 18px, 400, @text-color-text);
   }
 
   .example__statistics-wrapper-main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
   }
 
   .example__statistics-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
     width: 124px;
-    flex-grow: 1;
+    margin: 0;
+    padding-top: 13px;
+
+    border: 1px solid @gray-205;
+    border-radius: 4px;
   }
 
   .example__statistics {
@@ -46,37 +60,160 @@
   }
 
   .example__statistics-item {
+    width: 77px;
+    margin-top: 9px;
+    margin-bottom: -16px;
+    padding-right: 5px;
+    padding-left: 5px;
+
     .font-size(12px, 12px, 400, @text-color-text);
+    text-align: center;
+
+    background-color: @gray-242;
   }
 
   .example__food-costs {
-    flex-grow: 1;
-    text-align: center;
+    width: 100%;
+    margin-top: 34px;
 
     font-family: @font-secondary;
     .font-size(14px, 20px, 400, @text-color-primary, uppercase);
+    text-align: center;
+  }
+
+  .example__image-wrapper {
+    position: relative;
+    display: flex;
+    width: 320px;
+    height: 240px;
   }
 
   .example__image {
-    align-self: center;
+    display: block;
+  }
+
+  .example__image-after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    background-color: @bg-color-primary;
+
+    object-fit: none;
+    object-position: left;
   }
 
   .example__controls {
-    align-self: center;
+    box-sizing: border-box;
+    display: flex;
+    width: 250px;
+    margin-top: 32px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .example__button {
+    display: flex;
+    padding: 0;
 
     font-family: @font-secondary;
     .font-size(16px, 20px, 400, @text-color-primary, uppercase);
+
+    background-color: @gray-242;
+    border: none;
+    border-bottom: 1px dashed @black-opacity-23;
+
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 1px solid @black-opacity-40;
+    }
+
+    &:active {
+      border: none;
+    }
+
+    &--before {
+      margin-left: 29px;
+    }
+  }
+
+  .example__controls-bar {
+    position: relative;
+    box-sizing: border-box;
+    width: 84px;
+    height: 14px;
+    margin-top: 3px;
+    margin-right: 17px;
+    margin-left: 18px;
+
+    background-color: @white;
+    border: 1px solid @gray-205;
+    border-radius: 10px;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 3px;
+      left: 5px;
+
+      width: 35px;
+      height: 6px;
+
+      background-color: @green--light;
+      border-radius: 10px;
+    }
+
+    &--after {
+      &::before {
+        left: 42px;
+      }
+    }
+  }
+
+  .example__controls-button {
+    display: none;
   }
 }
 
 @media (min-width: @tablet-width) {
   .example {
+    margin-top: 11px;
+
+    background: linear-gradient(to top, @gray-242 462px, @white 462px);
+    border-top: 1px solid @gray-230;
+
+    .example__wrapper-bottom {
+      margin-bottom: 68px;
+    }
+
     .example__title {
+      margin-top: 43px;
+      margin-bottom: 30px;
+
       .font-size(60px, 60px, 400, @text-color-primary);
     }
 
     .example__description {
-      .font-size(16px, 18px, 400, @text-color-text);
+      width: 700px;
+      margin-top: 34px;
+
+      .font-size(16px, 24px, 400, @text-color-text);
+    }
+
+    .example__statistics-wrapper-main {
+      justify-content: unset;
+      margin-top: 37px;
+    }
+
+    .example__statistics-wrapper {
+      width: 162px;
+      margin-right: 42px;
+      padding-top: 14px;
     }
 
     .example__statistics {
@@ -85,23 +222,130 @@
     }
 
     .example__statistics-item {
+      margin-top: 11px;
+      margin-bottom: -6px;
+
       .font-size(14px, 14px, 400, @text-color-text);
+
+      background-color: @bg-color-secondary;
+
+      &--weight {
+        width: 105px;
+      }
+
+      &--time {
+        width: 130px;
+      }
     }
 
     .example__food-costs {
+      width: 190px;
+      margin-top: 7px;
+      margin-bottom: 0;
+      margin-left: auto;
+
       font-family: @font-secondary;
-      .font-size(20px, 20px, 400, @text-color-primary, uppercase);
+      .font-size(20px, 28px, 400, @text-color-primary, uppercase);
+      text-align: end;
+    }
+
+    .example__image-wrapper {
+      margin-top: 66px;
+      width: 690px;
+      height: 517px;
+      margin-left: 13px;
+    }
+
+    .example__image {
+      width: 690px;
+      height: 517px;
+    }
+
+    .example__image-after {
+      background: linear-gradient(to top, @gray-242 348px, @white 348px);
     }
 
     .example__controls {
+      width: 600px;
+      margin-top: 20px;
+    }
+
+    .example__button {
+      padding-bottom: 5px;
+
       font-family: @font-secondary;
       .font-size(20px, 20px, 400, @text-color-primary, uppercase);
+
+      &--before {
+        margin-left: 14px;
+      }
+    }
+
+    .example__controls-bar {
+      position: relative;
+
+      width: 428px;
+      height: 6px;
+      margin-top: 7px;
+      margin-right: 21px;
+      margin-left: 24px;
+
+      background-color: @gray-220;
+      border: none;
+      border-radius: 4px;
+
+      &::before {
+        content: none;
+      }
+    }
+
+    .example__controls-button {
+      position: absolute;
+      top: -14px;
+      left: 198px;
+
+      display: flex;
+      box-sizing: border-box;
+      width: 34px;
+      height: 34px;
+
+      background-color: @white;
+      border: 1px solid @gray-205;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px 0 @black--dark-opacity-15;
+
+      cursor: pointer;
+
+      &::before {
+        .before-after(12px, 12px, 8px, 8px);
+
+        background-color: @green--light;
+        border-radius: 560%;
+      }
+
+      &:hover {
+        box-shadow: 0 3px 5px 0 @black--dark-opacity-25;
+      }
+
+      &:active {
+        border: 2px solid @green--light;
+        box-shadow: 0 4px 5px 0 @black--dark-opacity-30;
+
+        &::before {
+          top: 11px;
+          left: 11px;
+        }
+      }
     }
   }
 }
 
 @media (min-width: @dekstop-width) {
   .example {
+    margin: 0;
+
+    border: none;
+
     .example__wrapper-main {
       flex-direction: row;
       .breakpoint();
@@ -110,12 +354,59 @@
     .example__wrapper-top {
       width: 610px;
       padding: 0;
+      padding-bottom: 71px;
+    }
+
+    .example__wrapper-bottom {
+      margin: 0;
+    }
+
+    .example__image-wrapper {
+      margin-top: 25px;
+      margin-left: 135px;
+    }
+
+    .example__image-after {
+      background: linear-gradient(to top, @gray-242 327px, @white 327px);
+    }
+
+    .example__title {
+      margin-top: 80px;
+    }
+
+    .example__description {
+      width: 435px;
+      margin-top: 116px;
+    }
+
+    .example__statistics-wrapper-main {
+      margin-top: 52px;
     }
 
     .example__statistics-wrapper {
       flex-grow: 0;
       width: 162px;
       margin-right: 42px;
+    }
+
+    .example__statistics-item {
+      background-color: @gray-242;
+    }
+
+    .example__food-costs {
+      width: auto;
+      margin-top: 56px;
+      margin-left: 1px;
+
+      span {
+        margin-left: 59px;
+      }
+    }
+
+    .example__controls {
+      margin-top: 41px;
+      margin-right: 0;
+      margin-left: 177px;
     }
   }
 }

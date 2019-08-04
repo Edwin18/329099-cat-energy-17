@@ -1,5 +1,6 @@
 .categories {
   .breakpoint();
+  margin-top: 2px;
 
   .categories__wrapper {
     display: flex;
@@ -13,6 +14,10 @@
 
 @media (min-width: @tablet-width) {
   .categories {
+    .categories__wrapper {
+      margin-top: -32px;
+    }
+
     .categories__program {
       margin-top: 30px;
     }
@@ -21,8 +26,12 @@
 
 @media (min-width: @dekstop-width) {
   .categories {
+    margin-top: 0;
+    padding-top: 50px;
+
     .categories__wrapper {
       flex-direction: row;
+      margin-top: 0;
       margin-left: -80px;
     }
 
