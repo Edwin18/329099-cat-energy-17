@@ -18,12 +18,19 @@
 
       position: absolute;
       top: 14px;
-      left: 248px;
+      left: 0;
+      z-index: -1;
 
       width: 100vw;
       height: 3px;
 
       background-color: @green--light;
+    }
+
+    span {
+      padding-right: 22px;
+
+      background-color: @white;
     }
   }
 
@@ -100,7 +107,10 @@
 
       &::after {
         top: 22px;
-        left: 374px;
+      }
+
+      span {
+        padding-right: 37px;
       }
     }
 

@@ -50,6 +50,8 @@
 
       position: absolute;
       top: 14px;
+      left: 0;
+      z-index: -1;
 
       width: 100vw;
       height: 3px;
@@ -57,25 +59,30 @@
       background-color: @green--light;
     }
 
+    span {
+      display: inline-block;
+      background-color: @white;
+    }
+
     &--about-owner {
       margin-bottom: 17px;
 
-      &::after {
-        left: 202px;
+      span {
+        margin-right: 78px;
       }
     }
 
     &--comment {
       margin-bottom: 35px;
 
-      &::after {
-        left: 143px;
+      span {
+        padding-right: 23px;
       }
     }
 
     &--additional {
-      &::after {
-        left: 165px;
+      span {
+        padding-right: 25px;
       }
     }
   }
@@ -324,22 +331,23 @@
       &--about-owner {
         margin-bottom: 60px;
 
-        &::after {
-          left: 554px;
+        span {
+          margin-right: 0;
+          padding-right: 42px;
         }
       }
 
       &--comment {
         margin-bottom: 76px;
 
-        &::after {
-          left: 220px;
+        span {
+          padding-right: 39px;
         }
       }
 
       &--additional {
-        &::after {
-          left: 253px;
+        span {
+          padding-right: 42px;
         }
       }
     }
