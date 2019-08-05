@@ -66,6 +66,6 @@ if (document.querySelector(".example__button")) {
         document.onmousemove = null;
         btnBar.onmouseup = null;
       }
-    };
+    }
   }
 }
