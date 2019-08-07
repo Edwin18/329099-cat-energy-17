@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous"> -->
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <header class="page-header page-header--index">
@@ -50,12 +59,12 @@
           <section class="categories__program weight-program weight-program--slim">
             <h3 class="weight-program__title">Похудение</h3>
             <p class="weight-program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="weight-program__link weight-program__link--slim" href="#">Каталог Slim</a>
+            <a class="weight-program__link weight-program__link--slim" href="catalog-slim.html">Каталог Slim</a>
           </section>
           <section class="categories__program weight-program weight-program--pro">
             <h3 class="weight-program__title">Набор массы</h3>
             <p class="weight-program__description">Заработать авторитет среди дворовых котов и&nbsp;даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="weight-program__link weight-program__link--pro" href="#">Каталог pro</a>
+            <a class="weight-program__link weight-program__link--pro" href="catalog-pro.html">Каталог pro</a>
           </section>
         </div>
       </section>
@@ -99,11 +108,11 @@
               </picture>
             </div>
             <div class="example__controls">
-              <button class="example__button example__button--before" type="button">Было</button>
+              <button class="example__button example__button--before" type="button" aria-label="Фото кота до диеты">Было</button>
               <div class="example__controls-bar">
                 <div class="example__controls-button"></div>
               </div>
-              <button class="example__button example__button--after" type="button">Стало</button>
+              <button class="example__button example__button--after" type="button" aria-label="Фото кота после диеты">Стало</button>
             </div>
           </div>
         </div>
@@ -117,7 +126,7 @@
             <h3 class="contacts__title">приглашаем к&nbsp;сотрудничеству дилеров!</h3>
             <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span class="contacts__address--city">Санкт-Петербург</span></p>
           </div>
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1563880130424!5m2!1sru!2sua" allowfullscreen></iframe>
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1563880130424!5m2!1sru!2sua" style="border: none;" allowfullscreen></iframe>
         </section>
       </div>
       <div class="page-footer__bottom">
@@ -154,7 +163,7 @@
             </li>
           </ul>
         </div>
-        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт компании которая разработала данный сайт">
           <span class="copyright__text">HTML Academy</span>
           <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" viewBox="16 4 28 51" width="27" height="34">
             <style>.st0{fill:#666666}</style>
@@ -163,7 +172,7 @@
         </a>
       </div>
     </footer>
-    <script src="js/picturefill.min.js"></script>
+    <script src="js/ofi.min.js" async></script>
     <script src="js/script.js"></script>
   </body>
 </html>

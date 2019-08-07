@@ -104,6 +104,10 @@
 
     object-fit: none;
     object-position: left;
+    /* stylelint-disable */
+    // fix for IE
+    font-family: "object-fit: none; object-position: left;";
+    /* stylelint-enable */
   }
 
   .example__controls {
@@ -186,6 +190,12 @@
 
     background: linear-gradient(to top, @gray-242 462px, @white 462px);
     border-top: 1px solid @gray-230;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .example__wrapper-main {
+        margin: 0 auto;
+      }
+    }
 
     .example__wrapper-bottom {
       margin-bottom: 68px;
@@ -381,12 +391,21 @@
 
     .example__statistics-wrapper-main {
       margin-top: 52px;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
 
     .example__statistics-wrapper {
       flex-grow: 0;
       width: 162px;
       margin-right: 42px;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        margin-right: 0;
+      }
     }
 
     .example__statistics-item {
@@ -400,6 +419,10 @@
 
       span {
         margin-left: 59px;
+      }
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        width: 100%;
       }
     }
 
