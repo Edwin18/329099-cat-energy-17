@@ -10,12 +10,18 @@
 
   .product__image {
     display: block;
+    width: 140px;
   }
 
   .product__table {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+
+    tbody {
+      display: flex;
+      flex-direction: column;
+    }
 
     tr {
       display: flex;
@@ -42,12 +48,14 @@
   }
 
   .product__field {
+    display: flex;
     margin-right: auto;
 
     .font-size(12px, 16px, 400, @text-color-text);
   }
 
   .product__value {
+    display: flex;
     .font-size(12px, 16px, 400, @text-color-text);
   }
 
@@ -69,6 +77,10 @@
 
     .product__wrapper {
       flex-direction: column;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        margin-top: 50px;
+      }
     }
 
     .product__image {
@@ -94,6 +106,10 @@
       margin-bottom: 16px;
       align-self: center;
       text-align: center;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        display: flex;
+      }
     }
 
     .product__link {
