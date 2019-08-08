@@ -217,7 +217,7 @@
       border: 2px solid @gray;
       padding-left: 12px;
 
-      + .form__input path {
+      + .form__input {
         fill: @green--light;
       }
     }
@@ -225,7 +225,7 @@
     &:invalid:not(:focus):not(:placeholder-shown) {
       border: 2px solid @red-lighter;
 
-      + .form__input path {
+      + .form__input {
         fill: @red-lighter;
       }
     }
@@ -235,6 +235,8 @@
     position: absolute;
     top: 17px;
     right: 16px;
+
+    fill: #222222;
 
     &--phone {
       top: 12px;
@@ -249,7 +251,7 @@
           &::after {
             .before-after(2px, -41px, 21px, 16px);
 
-            background-image: url("../img/icon-tick.svg");
+            background-image: url("../img/tick.svg");
             background-repeat: no-repeat;
           }
         }
