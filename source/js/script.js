@@ -3,6 +3,7 @@ var menu = document.querySelector(".main-nav");
 
 if (document.querySelector(".main-nav--open")) {
   menu.classList.remove("main-nav--open");
+  button.classList.remove("page-header__toggle--no-js");
   button.classList.add("page-header__toggle--open");
 }
 
