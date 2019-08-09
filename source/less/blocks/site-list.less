@@ -8,6 +8,8 @@
   .site-list__item {
     display: flex;
     justify-content: center;
+    padding-right: 20px;
+    padding-left: 20px;
 
     border-bottom: 1px solid @gray-230;
   }
@@ -50,10 +52,13 @@
   .site-list {
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 100%;
 
     .site-list__item {
       border: none;
+      padding-right: 0;
+      padding-left: 0;
     }
 
     .site-list__link {
