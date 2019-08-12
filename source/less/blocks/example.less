@@ -366,6 +366,7 @@
 
     .example__wrapper-bottom {
       margin: 0;
+      z-index: 1;
     }
 
     .example__image-wrapper {
@@ -382,8 +383,25 @@
     }
 
     .example__description {
+      position: relative;
+      z-index: 0;
+
       width: 435px;
       margin-top: 116px;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        top: -69px;
+        left: -100vw;
+        z-index: -1;
+
+        width: calc(100vw * 2);
+        height: 100%;
+
+        background-color: @gray-242;
+      }
     }
 
     .example__statistics-wrapper-main {

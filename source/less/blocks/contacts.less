@@ -8,10 +8,13 @@
     background-color: @gray-242;
   }
 
+  .contacts__wrapper-dekstop {
+    .breakpoint();
+  }
+
   .contacts__wrapper {
     display: flex;
     justify-content: space-between;
-    .breakpoint();
     padding-top: 12px;
     padding-bottom: 10px;
     margin: 0;
@@ -91,6 +94,10 @@
 
 @media (min-width: @dekstop-width) {
   .contacts {
+    .contacts__wrapper-dekstop {
+      position: relative;
+    }
+
     .contacts__wrapper {
       position: absolute;
       top: 95px;
@@ -99,12 +106,10 @@
       box-sizing: border-box;
       width: 570px;
       min-height: 201px;
+      padding-right: 40px;
+      padding-left: 35px;
 
       background-color: @bg-color-secondary;
-    }
-
-    .contacts__title {
-      margin-left: 36px;
     }
 
     .contacts__address {
